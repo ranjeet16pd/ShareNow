@@ -9,6 +9,9 @@ app.use(cors());
 app.use('/',router)
 
 DBConnection();
+app.get('/',async(req,res)=>{
+    res.send("this is the server ");
+})
 app.listen(Port,()=>{
     console.log('server is running on port 8000');
 })
